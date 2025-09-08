@@ -1,0 +1,52 @@
+body {
+    background: black;
+}
+
+h1 {
+    font-family: 'Graffiti font';
+    color: goldenrod;
+    text-shadow: 3px 2px 0 gold;
+    text-align: center;
+    margin-bottom: 20px; /* 👈 espacio con los botones */
+    margin-top: 180px;
+    animation: desvanecer 0.5s infinite alternate;
+}
+
+.buttons {
+  display: flex;              /* pone los botones en fila */
+  justify-content: center;    /* los centra horizontalmente */
+  gap: 40px;                  /* espacio entre botones */
+}
+
+.buttons_option {
+    cursor: pointer;
+    background: goldenrod;
+    border: goldenrod;
+    box-shadow: 0 0 20px gold;
+    border-radius: 4px;
+    padding: 10px 20px;         /* más espacio dentro */
+    font-size: 16px;
+    transition: 0.5s;
+    font-family: "Caveat Brush";
+}
+
+.buttons_option:hover {
+    transform: scale(1.1);
+    background: grey;
+    box-shadow: 0 0 20px rgb(190, 186, 186);
+    color: white;
+    font-family: "Caveat Brush";
+}
+
+@keyframes desvanecer {
+    0% {
+    color: gold;
+    text-shadow: 3px 2px 0 goldenrod;
+    opacity: 1; /* completamente visible */
+}
+    100% {
+    color: black;
+    text-shadow: 0 0 0 black; /* se apaga la sombra */
+    opacity: 0.2; /* casi invisible */
+}
+}
